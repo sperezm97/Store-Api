@@ -6,15 +6,23 @@
   "scripts": {
     "build:prod": "rimraf ./build && tsc",
     "dev": "nodemon ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node build/index.js"
+    "test": "mocha -r ts-node/register **/test/**/*.test.ts",
+    "start": "npm run build && node build/index.js",
+    "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/mocha": "^8.0.1",
     "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.1.0",
     "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
