@@ -1,17 +1,28 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { config } from 'dotenv';
+import mongoose from 'mongoose';
 import cors from 'cors';
+import typeDefs from './schemas';
+import resolvers from './resolvers';
+require('dotenv').config();
 
-config();
 const app = express();
 app.use(cors());
 
-const schema = {};
-const resolvers = {};
+mongoose.connect(
+  process.env.MONGO_URI || '',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  },
+  err => {
+    console.log(err || 'entro la db');
+  },
+);
 
 const server = new ApolloServer({
-  typeDefs: schema,
+  typeDefs,
   resolvers,
 });
 
