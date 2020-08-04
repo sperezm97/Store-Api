@@ -22,7 +22,13 @@ export interface IInvoices {
   updatedAt?: Date | string;
 }
 
-export interface IProducts {}
+export interface IProducts {
+  _id?: string;
+  identification?: string;
+  status: Status;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+}
 
 export interface ISuppliers {}
 
