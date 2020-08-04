@@ -11,9 +11,18 @@ export interface IDepartments {
   updatedAt?: Date | string;
 }
 
-export interface IInvoices {}
+export interface IInvoices {
+  _id?: string;
+  identification?: string;
+  status: Status;
+  product: keyof IProducts;
+  quantity?: number;
+  unit: keyof IUnits;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+}
 
-export interface IProdcuts {}
+export interface IProducts {}
 
 export interface ISuppliers {}
 
