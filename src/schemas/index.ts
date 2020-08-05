@@ -19,4 +19,4 @@ const link = gql`
   }
 `;
 
-export default [link, departments];
+export default [link, departments, units];

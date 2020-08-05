@@ -7,7 +7,7 @@ export default {
       const data = await schema.find({});
       return data;
     },
-    oneDepartment: async (root: any, _id: keyof IDepartments) => {
+    department: async (root: any, _id: keyof IDepartments) => {
       const data = await schema.findById(_id);
       return data;
     },

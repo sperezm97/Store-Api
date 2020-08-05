@@ -30,6 +30,18 @@ export interface IProducts {
   updatedAt?: Date | string;
 }
 
-export interface ISuppliers {}
+export interface ISuppliers {
+  _id?: string;
+  identification?: string;
+  status: Status;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+}
 
-export interface IUnits {}
+export interface IUnits {
+  _id?: string;
+  label?: string;
+  status: Status;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
+}

@@ -5,7 +5,7 @@ export default gql`
 
   extend type Query {
     departments: [Department]
-    oneDepartment(_id: ID!): Department
+    department(_id: ID!): Department
   }
 
   extend type Mutation {
