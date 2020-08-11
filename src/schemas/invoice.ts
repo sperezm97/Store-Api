@@ -21,11 +21,6 @@ export default gql`
     status: Status
   }
 
-  enum Status {
-    ACTIVE
-    INACTIVE
-  }
-
   type Invoice {
     _id: ID!
     identification: String!
