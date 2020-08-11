@@ -7,15 +7,9 @@ export default gql`
   }
 
   extend type Mutation {
-    createProducts(Products: ProductsInput): Products!
+    createProducts(identification: String, label: String!, status: Status!): Products!
     updateProducts(_id: ID!, label: String, status: Status): Products!
     deleteProducts(_id: ID!): Products
-  }
-
-  input ProductsInput {
-    identification: String
-    label: String!
-    status: Status!
   }
 
   type Products {

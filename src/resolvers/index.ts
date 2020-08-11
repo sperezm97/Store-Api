@@ -18,4 +18,4 @@ const link = {
   }),
 };
 
-export default [link, department, unitConversation, suppliers, products];
+export default [link, department, unitConversation, suppliers, products, invoice];
