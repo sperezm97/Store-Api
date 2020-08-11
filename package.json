@@ -7,7 +7,7 @@
     "build:prod": "rimraf ./build && tsc",
     "dev": "nodemon ",
     "test": "mocha -r ts-node/register **/test/**/*.test.ts",
-    "start": "npm run build && node build/index.js",
+    "start": "yarn run build:prod && node build/index.js",
     "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix"
   },
   "keywords": [],
