@@ -9,7 +9,8 @@ const suppliers = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['active', 'inactive'],
+    enum: ['ACTIVE', 'INACTIVE'],
+    default: 'ACTIVE',
   },
   createdAt: {
     type: Date,
