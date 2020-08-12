@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:prod": "rimraf ./build && tsc",
+    "build:prod": "tsc",
     "dev": "nodemon ",
     "test": "mocha -r ts-node/register **/test/**/*.test.ts",
     "start": "yarn run build:prod && node build/index.js",
