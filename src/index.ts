@@ -11,19 +11,12 @@ config();
 
 const app = express();
 app.use(cors());
-app.use(helmet());
 
-mongoose.connect(
-  process.env.MONGO_URI as string,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  },
-  err => {
-    console.log(err || 'entro la db');
-  },
-);
+mongoose.connect(process.env.MONGO_URI as string, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+});
 
 const server = new ApolloServer({
   typeDefs,
@@ -32,4 +25,6 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app, path: '/graphql' });
 
-app.listen({ port: process.env.PORT });
+app.listen({ port: process.env.PORT || 8000 }, () => {
+  console.log('subio graphjQ:');
+});
