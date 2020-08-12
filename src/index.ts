@@ -21,6 +21,8 @@ mongoose.connect(process.env.MONGO_URI as string, {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
+  playground: true,
 });
 
 server.applyMiddleware({ app, path: '/graphql' });

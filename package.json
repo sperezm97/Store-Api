@@ -31,11 +31,11 @@
     "mocha": "^8.1.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
-    "ts-node": "^8.10.2"
+    "ts-node": "^8.10.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.7"
   },
   "dependencies": {
-    "rimraf": "^3.0.2",
-    "typescript": "^3.9.7",
     "apollo-server": "^2.16.1",
     "apollo-server-express": "^2.16.1",
     "cors": "^2.8.5",
