@@ -7,7 +7,7 @@
     "build:prod": "rimraf ./build && tsc",
     "dev": "nodemon ",
     "test": "mocha -r ts-node/register **/test/**/*.test.ts",
-    "start": "yarn run build:prod && node build/index.js",
+    "start": "node build/index.js",
     "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix"
   },
   "keywords": [],
@@ -42,6 +42,7 @@
     "express": "^4.17.1",
     "graphql": "^15.3.0",
     "graphql-iso-date": "^3.6.1",
+    "helmet": "^4.0.0",
     "mongoose": "^5.9.27"
   }
 }
