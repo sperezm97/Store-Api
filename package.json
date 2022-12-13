@@ -39,7 +39,7 @@
     "apollo-server": "^2.16.1",
     "apollo-server-express": "^2.16.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.3.0",
     "graphql-iso-date": "^3.6.1",
     "helmet": "^4.0.0",
